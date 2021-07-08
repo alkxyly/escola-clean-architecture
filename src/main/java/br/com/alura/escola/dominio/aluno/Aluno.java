@@ -8,14 +8,21 @@ public class Aluno {
 	private CPF cpf;
 	private String nome;
 	private Email email;
+	
 	private List<Telefone> telefones = new  ArrayList<>();
 	
+	private String senha;
 	
 	public Aluno(CPF cpf, String nome, Email email) {
 		super();
 		this.cpf = cpf;
 		this.nome = nome;
 		this.email = email;
+	}
+
+
+	public String getSenha() {
+		return senha;
 	}
 
 
