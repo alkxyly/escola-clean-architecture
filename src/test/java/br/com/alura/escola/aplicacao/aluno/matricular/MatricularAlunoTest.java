@@ -30,14 +30,4 @@ class MatricularAlunoTest {
 		
 	}
 	
-	@Test
-	void AlunoNaoPodeTerMaisDeDoisTelefones() {
-		assertThrows(NumeroMaximoTelefoneAlunoException.class, () ->{			
-			Aluno aluno = new Aluno(new CPF("123.456.789-78"), "Fulano", new Email("fulano@gmail.com"));
-			aluno.adicionarTelefone("79", "5684489");
-			aluno.adicionarTelefone("79", "9999998");
-			aluno.adicionarTelefone("79", "9999998");
-		});
-	}
-
 }
