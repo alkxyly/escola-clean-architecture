@@ -3,6 +3,8 @@ package br.com.alura.escola.dominio.aluno;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.alura.escola.dominio.exception.NumeroMaximoTelefoneAlunoException;
+
 public class Aluno {
 	
 	private CPF cpf;
@@ -27,6 +29,9 @@ public class Aluno {
 
 
 	public void adicionarTelefone(String ddd, String telefone) {
+		if(this.telefones.size() == 2) 
+			throw new NumeroMaximoTelefoneAlunoException("Número máximo de telefone atingido");
+
 		this.telefones.add(new Telefone(ddd, telefone));
 	}
 

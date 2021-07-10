@@ -17,5 +17,4 @@ public class MatricularAluno {
 		repositorio.matricular(novo);
 	}
 	
-	
 }
