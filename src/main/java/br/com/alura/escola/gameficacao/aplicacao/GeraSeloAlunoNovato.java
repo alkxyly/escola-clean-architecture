@@ -20,6 +20,7 @@ public class GeraSeloAlunoNovato extends Ouvinte{
 		CPF cpfDoAluno = (CPF) evento.informacoes().get("cpf");
 		Selo novato = new Selo(cpfDoAluno, "Novato");
 		repositorioDeSelos.adicionar(novato);
+		System.out.println("Gerou Selo para o aluno de cpf "+ cpfDoAluno.getNumero());
 	}
 
 	@Override
